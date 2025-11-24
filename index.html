@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Vamos al Español</title>
+		<link href="style-page-vae.css" rel="stylesheet" type="text/css">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="img/favicon_io/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_io/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io/favicon-16x16.png">
+        <link rel="manifest" href="img/favicon_io/site.webmanifest">
+	</head>
+	<body>
+
+	<div class="bg-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+ 	</div>
+
+<!-- SINGLE NAVIGATION HEADER -->
+    <header>
+        <div class="container">
+            <nav class="glass">
+                <div class="logo" onclick="showPage('home')">
+                    <div class="logo-icon">
+                        <img class="logo-icon" src="img/DictionaryLogo.png">
+                    </div>
+                    <span>Vamos al Español</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#Sustantivos" onclick="showPage('home')" class="active">Sustantivos </a>
+                    <!-- <a href="#" onclick="showPage('game')">Práctica</a> -->
+                    <!-- <a href="#" onclick="gameRandomWord('voc-ropa')">Gramática</a> -->
+                    <!-- <a href="#" onclick="showPage('contact')">Contacto</a> -->
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    
+    <!-- ABOUT PAGE -->
+    <div id="home" class="page active">
+        <div class="container">
+
+
+            <div class="content-wrapper">
+                <section class="team-section">
+                    <h2>Sustantivos</h2>
+                    <div class="team-grid" id="teamGrid">
+
+                        	<!-- <div class="team-member glass">
+                                <img class="img-palabras" src="img/1.jpg">
+                        	</div> -->
+                        
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+
+<div id="game" class="page">
+        <div class="container">
+            <div class="content-wrapper">
+
+                <section class="team-section">
+                    <!-- <h2>Sustantivos</h2> -->
+
+                            <div class="team-member glass game-card">
+                                <img id="imgJugar" class="img-palabras" src="img/1.jpg">
+                                <button id="btn1" class="glass button-game">El vestido</button>
+                                <button id="btn2" class="glass button-game">El vestido</button>
+                                <button id="btn3" class="glass button-game">El vestido</button>
+                                <button id="btn-next" class="glass button-game none">---></button>
+                            </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- SINGLE FOOTER -->
+<!--     <div id="footer">
+        <div class="container">
+            <footer class="glass">
+                <div class="footer-content">
+                    <div class="footer-links">
+                        <a href="#" onclick="showPage('about')">About Us</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">XML Sitemap</a>
+                        <a href="#" onclick="showPage('contact')">Contact</a>
+                    </div>
+                    <div class="copyright">
+                        &copy; 2025 Glossy Touch. All rights reserved. Crafted with modern web technologies. 
+                        Provided by <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div> -->
+
+
+
+ 	
+ 	<script src="items.js"></script>
+ 	<script src="main.js"></script>
+    <script src="style-page-vae.js"></script>
+	</body>
+</html>
