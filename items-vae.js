@@ -13,18 +13,15 @@ const items = [
       { word: "Las vaqueros", img: "img/La ropa/Las vaqueros.jpg" },
       { word: "Los pantalones", img: "img/La ropa/Los pantalones.jpg" }
     ]},
-  // { id: "voc-botas", name: "botas", emoji: "👢", words: [
-  //     { word: "El vestido", img: "img/1.jpg" },
-  //     { word: "La camisa", img: "img/1.jpg" },
-  //     { word: "La chaqueta", img: "img/1.jpg" },
-  //     { word: "La gorra", img: "img/1.jpg" },
-  //     { word: "La falda", img: "img/1.jpg" }
-  //   ]},
-  // { id: "voc-camisa", name: "camisa", emoji: "👔", words: [
-  //     { word: "El vestido", img: "img/1.jpg" },
-  //     { word: "La camisa", img: "img/1.jpg" },
-  //     { word: "La chaqueta", img: "img/1.jpg" },
-  //     { word: "La gorra", img: "img/1.jpg" },
-  //     { word: "La falda", img: "img/1.jpg" }
-  //   ]}
+  { id: "voc-frutas", name: "Las frutas", emoji: "🍎", words: [
+      { word: "Las frutas", img: "img/Las frutas/Las frutas.jpg" },
+      { word: "La uva", img: "img/Las frutas/La uva.jpg" },
+      { word: "La pera", img: "img/Las frutas/La pera.jpg" },
+      { word: "La granada", img: "img/Las frutas/La granada.jpg" },
+      { word: "La ciruela", img: "img/Las frutas/La ciruela.jpg" },
+      { word: "El platano", img: "img/Las frutas/El platano.jpg" },
+      { word: "El coco", img: "img/Las frutas/El coco.jpg" },
+      { word: "El albaricoque", img: "img/Las frutas/El albaricoque.jpg" },
+      { word: "La piña", img: "img/Las frutas/La piña.jpg" }
+    ]}
 ];
