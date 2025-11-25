@@ -474,4 +474,11 @@ nav {
     .logo {
         font-size: 22px;
     }
+
+}
+
+@media (max-width: 500px) {
+    .game-card {
+        width: auto;
+    }
 }
