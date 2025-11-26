@@ -10,7 +10,7 @@ const items = [
       { word: "La pijama", img: "img/La ropa/La pijama.jpg" },
       { word: "La falda", img: "img/La ropa/La falda.jpg" },
       { word: "Los pantalones cortos", img: "img/La ropa/Los pantalones cortos.jpg" },
-      { word: "Las vaqueros", img: "img/La ropa/Las vaqueros.jpg" },
+      { word: "Los vaqueros", img: "img/La ropa/Los vaqueros.jpg" },
       { word: "Los pantalones", img: "img/La ropa/Los pantalones.jpg" }
     ]},
   { id: "voc-frutas", name: "Las frutas", emoji: "🍎", words: [
@@ -34,4 +34,5 @@ const items = [
       { word: "La naranja", img: "img/Las frutas/La naranja.jpg" }
     ]}
 ];
+
 
