@@ -19,9 +19,19 @@ const items = [
       { word: "La pera", img: "img/Las frutas/La pera.jpg" },
       { word: "La granada", img: "img/Las frutas/La granada.jpg" },
       { word: "La ciruela", img: "img/Las frutas/La ciruela.jpg" },
-      { word: "El platano", img: "img/Las frutas/El platano.jpg" },
+      { word: "El platáno", img: "img/Las frutas/El platáno.jpg" },
       { word: "El coco", img: "img/Las frutas/El coco.jpg" },
       { word: "El albaricoque", img: "img/Las frutas/El albaricoque.jpg" },
-      { word: "La piña", img: "img/Las frutas/La piña.jpg" }
+      { word: "La piña", img: "img/Las frutas/La piña.jpg" },
+      { word: "El caqui", img: "img/Las frutas/El caqui.jpg" },
+      { word: "El kiwi", img: "img/Las frutas/El kiwi.jpg" },
+      { word: "El limón", img: "img/Las frutas/El limón.jpg" },
+      { word: "El mango", img: "img/Las frutas/El mango.jpg" },
+      { word: "El melocotón", img: "img/Las frutas/El melocotón.jpg" },
+      { word: "El pomelo", img: "img/Las frutas/El pomelo.jpg" },
+      { word: "La lima", img: "img/Las frutas/La lima.jpg" },
+      { word: "La manzana", img: "img/Las frutas/La manzana.jpg" },
+      { word: "La naranja", img: "img/Las frutas/La naranja.jpg" }
     ]}
 ];
+
