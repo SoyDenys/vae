@@ -124,7 +124,7 @@ const items = [
       { word: "Ochenta y seis", img: "img/Los números/Ochenta y seis.jpg" },
       { word: "Ochenta y siete", img: "img/Los números/Ochenta y siete.jpg" },
       { word: "Ochenta y ocho", img: "img/Los números/Ochenta y ocho.jpg" },
-      { word: "Ochenta nueve", img: "img/Los números/Ochenta nueve.jpg" },
+      { word: "Ochenta y nueve", img: "img/Los números/Ochenta y nueve.jpg" },
       { word: "Noventa", img: "img/Los números/Noventa.jpg" },
       { word: "Noventa y uno", img: "img/Los números/Noventa y uno.jpg" },
       { word: "Noventa y dos", img: "img/Los números/Noventa y dos.jpg" },
