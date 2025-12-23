@@ -140,8 +140,8 @@ const items = [
     ]},
 { id: "voc-números", name: "Los números desde 100", emoji: "💯", words: [
       { word: "Cien", img: "img/Los números/Cien.jpg" },
-      { word: "Cien uno", img: "img/Los números/Cien uno.jpg" },
-      { word: "Cien once", img: "img/Los números/Cien once.jpg" },
+      { word: "Ciento uno", img: "img/Los números/Ciento uno.jpg" },
+      { word: "Ciento once", img: "img/Los números/Ciento once.jpg" },
 
       { word: "Doscientos", img: "img/Los números/Doscientos.jpg" },
       { word: "Doscientos dos", img: "img/Los números/Doscientos dos.jpg" },
@@ -191,3 +191,4 @@ const items = [
       // { word: "", img: "img/Los números/.jpg" },
     ]},
 ];
+
