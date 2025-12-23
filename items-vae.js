@@ -13,7 +13,7 @@ const items = [
       { word: "Los vaqueros", img: "img/La ropa/Los vaqueros.jpg" },
       { word: "Los pantalones", img: "img/La ropa/Los pantalones.jpg" }
     ]},
-  { id: "voc-frutas", name: "Las frutas", emoji: "🍎", words: [
+  { id: "voc-frutas-1", name: "Las frutas", emoji: "🍎", words: [
       { word: "Las frutas", img: "img/Las frutas/Las frutas.jpg" },
       { word: "La uva", img: "img/Las frutas/La uva.jpg" },
       { word: "La pera", img: "img/Las frutas/La pera.jpg" },
@@ -34,7 +34,7 @@ const items = [
       { word: "La naranja", img: "img/Las frutas/La naranja.jpg" }
       // { word: "", img: "img/.jpg" },
     ]},
-  { id: "voc-números", name: "Los números", emoji: "🔢", words: [
+  { id: "voc-números-2", name: "Los números de 0 a 100", emoji: "🔢", words: [
       { word: "Cero", img: "img/Los números/Cero.jpg" },
       { word: "Uno", img: "img/Los números/Uno.jpg" },
       { word: "Dos", img: "img/Los números/Dos.jpg" },
@@ -136,6 +136,58 @@ const items = [
       { word: "Noventa y ocho", img: "img/Los números/Noventa y ocho.jpg" },
       { word: "Noventa y nueve", img: "img/Los números/Noventa y nueve.jpg" },
       { word: "Cien", img: "img/Los números/Cien.jpg" },
+      // { word: "", img: "img/Los números/.jpg" },
+    ]},
+{ id: "voc-números", name: "Los números desde 100", emoji: "💯", words: [
+      { word: "Cien", img: "img/Los números/Cien.jpg" },
+      { word: "Cien uno", img: "img/Los números/Cien uno.jpg" },
+      { word: "Cien once", img: "img/Los números/Cien once.jpg" },
+
+      { word: "Doscientos", img: "img/Los números/Doscientos.jpg" },
+      { word: "Doscientos dos", img: "img/Los números/Doscientos dos.jpg" },
+      { word: "Doscientos veintidós", img: "img/Los números/Doscientos veintidós.jpg" },
+
+      { word: "Trescientos", img: "img/Los números/Trescientos.jpg" },
+      { word: "Trescientos tres", img: "img/Los números/Trescientos tres.jpg" },
+      { word: "Trescientos treinta y tres", img: "img/Los números/Trescientos treinta y tres.jpg" },
+
+      { word: "Cuatrocientos", img: "img/Los números/Cuatrocientos.jpg" },
+      { word: "Cuatrocientos cuatro", img: "img/Los números/Cuatrocientos cuatro.jpg" },
+      { word: "Cuatrocientos cuarenta y cuatro", img: "img/Los números/Cuatrocientos cuarenta y cuatro.jpg" },
+
+      { word: "Quinientos", img: "img/Los números/Quinientos.jpg" },
+      { word: "Quinientos cinco", img: "img/Los números/Quinientos cinco.jpg" },
+      { word: "Quinientos cincuenta y cinco", img: "img/Los números/Quinientos cincuenta y cinco.jpg" },
+
+      { word: "Seiscientos", img: "img/Los números/Seiscientos.jpg" },
+      { word: "Seiscientos seis", img: "img/Los números/Seiscientos seis.jpg" },
+      { word: "Seiscientos sesenta y seis", img: "img/Los números/Seiscientos sesenta y seis.jpg" },
+
+      { word: "Setecientos", img: "img/Los números/Setecientos.jpg" },
+      { word: "Setecientos siete", img: "img/Los números/Setecientos siete.jpg" },
+      { word: "Setecientos setenta y siete", img: "img/Los números/Setecientos setenta y siete.jpg" },
+
+      { word: "Ochocientos", img: "img/Los números/Ochocientos.jpg" },
+      { word: "Ochocientos ocho", img: "img/Los números/Ochocientos ocho.jpg" },
+      { word: "Ochocientos ochenta y ocho", img: "img/Los números/Ochocientos ochenta y ocho.jpg" },
+
+      { word: "Novecientos", img: "img/Los números/Novecientos.jpg" },
+      { word: "Novecientos nueve", img: "img/Los números/Novecientos nueve.jpg" },
+      { word: "Novecientos noventa y nueve", img: "img/Los números/Novecientos noventa y nueve.jpg" },
+
+      { word: "Mil", img: "img/Los números/Mil.jpg" },
+      { word: "Dos mil", img: "img/Los números/Dos mil.jpg" },
+      { word: "Tres mil", img: "img/Los números/Tres mil.jpg" },
+      { word: "Cuatro mil", img: "img/Los números/Cuatro mil.jpg" },
+      { word: "Cinco mil", img: "img/Los números/Cinco mil.jpg" },
+      { word: "Seis mil", img: "img/Los números/Seis mil.jpg" },
+      { word: "Siete mil", img: "img/Los números/Siete mil.jpg" },
+      { word: "Ocho mil", img: "img/Los números/Ocho mil.jpg" },
+      { word: "Nueve mil", img: "img/Los números/Nueve mil.jpg" },
+      { word: "Diez mil", img: "img/Los números/Diez mil.jpg" },
+
+      { word: "Un millón", img: "img/Los números/Un millón.jpg" },
+
       // { word: "", img: "img/Los números/.jpg" },
     ]},
 ];
