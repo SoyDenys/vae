@@ -1,4 +1,35 @@
 const items = [
+  { id: "voc-abecedario", name: "El abecedario", emoji: "🔠", words: [
+      { word: "a", img: "img/El abecedario/a.jpg" },
+      { word: "be", img: "img/El abecedario/be.jpg" },
+      { word: "ce", img: "img/El abecedario/ce.jpg" },
+      { word: "de", img: "img/El abecedario/de.jpg" },
+      { word: "e", img: "img/El abecedario/e.jpg" },
+      { word: "efe", img: "img/El abecedario/efe.jpg" },
+      { word: "ge", img: "img/El abecedario/ge.jpg" },
+      { word: "hache", img: "img/El abecedario/hache.jpg" },
+      { word: "i", img: "img/El abecedario/i.jpg" },
+      { word: "jota", img: "img/El abecedario/jota.jpg" },
+      { word: "ka", img: "img/El abecedario/ka.jpg" },
+      { word: "ele", img: "img/El abecedario/ele.jpg" },
+      { word: "eme", img: "img/El abecedario/eme.jpg" },
+      { word: "ene", img: "img/El abecedario/ene.jpg" },
+      { word: "eñe", img: "img/El abecedario/eñe.jpg" },
+      { word: "o", img: "img/El abecedario/o.jpg" },
+      { word: "pe", img: "img/El abecedario/pe.jpg" },
+      { word: "cu", img: "img/El abecedario/cu.jpg" },
+      { word: "erre", img: "img/El abecedario/erre.jpg" },
+      { word: "ese", img: "img/El abecedario/ese.jpg" },
+      { word: "te", img: "img/El abecedario/te.jpg" },
+      { word: "u", img: "img/El abecedario/u.jpg" },
+      { word: "uve", img: "img/El abecedario/uve.jpg" },
+      { word: "uve doble", img: "img/El abecedario/uve doble.jpg" },
+      { word: "equis", img: "img/El abecedario/equis.jpg" },
+      { word: "igrega", img: "img/El abecedario/igrega.jpg" },
+      { word: "zeta", img: "img/El abecedario/zeta.jpg" },
+      { word: "che", img: "img/El abecedario/che.jpg" },
+      { word: "elle", img: "img/El abecedario/elle.jpg" },
+    ]},
   { id: "voc-ropa", name: "La ropa", emoji: "👕", words: [
       { word: "El abrigo", img: "img/La ropa/El abrigo.jpg" },
       { word: "El jersey", img: "img/La ropa/El jersey.jpg" },
@@ -191,4 +222,5 @@ const items = [
       // { word: "", img: "img/Los números/.jpg" },
     ]},
 ];
+
 
