@@ -63,7 +63,6 @@ const items = [
       { word: "La lima", img: "img/Las frutas/La lima.jpg" },
       { word: "La manzana", img: "img/Las frutas/La manzana.jpg" },
       { word: "La naranja", img: "img/Las frutas/La naranja.jpg" }
-      // { word: "", img: "img/.jpg" },
     ]},
   { id: "voc-números-2", name: "Los números de 0 a 100", emoji: "🔢", words: [
       { word: "Cero", img: "img/Los números/Cero.jpg" },
@@ -166,46 +165,36 @@ const items = [
       { word: "Noventa y siete", img: "img/Los números/Noventa y siete.jpg" },
       { word: "Noventa y ocho", img: "img/Los números/Noventa y ocho.jpg" },
       { word: "Noventa y nueve", img: "img/Los números/Noventa y nueve.jpg" },
-      { word: "Cien", img: "img/Los números/Cien.jpg" },
-      // { word: "", img: "img/Los números/.jpg" },
+      { word: "Cien", img: "img/Los números/Cien.jpg" }
     ]},
 { id: "voc-números", name: "Los números desde 100", emoji: "💯", words: [
       { word: "Cien", img: "img/Los números/Cien.jpg" },
       { word: "Ciento uno", img: "img/Los números/Ciento uno.jpg" },
       { word: "Ciento once", img: "img/Los números/Ciento once.jpg" },
-
       { word: "Doscientos", img: "img/Los números/Doscientos.jpg" },
       { word: "Doscientos dos", img: "img/Los números/Doscientos dos.jpg" },
       { word: "Doscientos veintidós", img: "img/Los números/Doscientos veintidós.jpg" },
-
       { word: "Trescientos", img: "img/Los números/Trescientos.jpg" },
       { word: "Trescientos tres", img: "img/Los números/Trescientos tres.jpg" },
       { word: "Trescientos treinta y tres", img: "img/Los números/Trescientos treinta y tres.jpg" },
-
       { word: "Cuatrocientos", img: "img/Los números/Cuatrocientos.jpg" },
       { word: "Cuatrocientos cuatro", img: "img/Los números/Cuatrocientos cuatro.jpg" },
       { word: "Cuatrocientos cuarenta y cuatro", img: "img/Los números/Cuatrocientos cuarenta y cuatro.jpg" },
-
       { word: "Quinientos", img: "img/Los números/Quinientos.jpg" },
       { word: "Quinientos cinco", img: "img/Los números/Quinientos cinco.jpg" },
       { word: "Quinientos cincuenta y cinco", img: "img/Los números/Quinientos cincuenta y cinco.jpg" },
-
       { word: "Seiscientos", img: "img/Los números/Seiscientos.jpg" },
       { word: "Seiscientos seis", img: "img/Los números/Seiscientos seis.jpg" },
       { word: "Seiscientos sesenta y seis", img: "img/Los números/Seiscientos sesenta y seis.jpg" },
-
       { word: "Setecientos", img: "img/Los números/Setecientos.jpg" },
       { word: "Setecientos siete", img: "img/Los números/Setecientos siete.jpg" },
       { word: "Setecientos setenta y siete", img: "img/Los números/Setecientos setenta y siete.jpg" },
-
       { word: "Ochocientos", img: "img/Los números/Ochocientos.jpg" },
       { word: "Ochocientos ocho", img: "img/Los números/Ochocientos ocho.jpg" },
       { word: "Ochocientos ochenta y ocho", img: "img/Los números/Ochocientos ochenta y ocho.jpg" },
-
       { word: "Novecientos", img: "img/Los números/Novecientos.jpg" },
       { word: "Novecientos nueve", img: "img/Los números/Novecientos nueve.jpg" },
       { word: "Novecientos noventa y nueve", img: "img/Los números/Novecientos noventa y nueve.jpg" },
-
       { word: "Mil", img: "img/Los números/Mil.jpg" },
       { word: "Dos mil", img: "img/Los números/Dos mil.jpg" },
       { word: "Tres mil", img: "img/Los números/Tres mil.jpg" },
@@ -216,10 +205,19 @@ const items = [
       { word: "Ocho mil", img: "img/Los números/Ocho mil.jpg" },
       { word: "Nueve mil", img: "img/Los números/Nueve mil.jpg" },
       { word: "Diez mil", img: "img/Los números/Diez mil.jpg" },
-
       { word: "Un millón", img: "img/Los números/Un millón.jpg" },
-
-      // { word: "", img: "img/Los números/.jpg" },
+    ]},
+    { id: "voc-material-escolar", name: "El material escolar", emoji: "✏️", words: [
+      { word: "El lápiz", img: "img/El material escolar/El lápiz.jpg" },
+      { word: "El bolígrafo", img: "img/El material escolar/El bolígrafo.jpg" },
+      { word: "El rotulador", img: "img/El material escolar/El rotulador.jpg" },
+      { word: "El sacapuntas", img: "img/El material escolar/El sacapuntas.jpg" },
+      { word: "La goma de borrar", img: "img/El material escolar/La goma de borrar.jpg" },
+      { word: "Las tijeras", img: "img/El material escolar/Las tijeras.jpg" },
+      { word: "La calculadora", img: "img/El material escolar/La calculadora.jpg" },
+      { word: "La regla", img: "img/El material escolar/La regla.jpg" },
+      { word: "El libro", img: "img/El material escolar/El libro.jpg" },
+      // { word: "", img: "img/El material escolar/.jpg" },
     ]},
 ];
 
