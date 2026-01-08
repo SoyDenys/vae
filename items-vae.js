@@ -217,8 +217,18 @@ const items = [
       { word: "La calculadora", img: "img/El material escolar/La calculadora.jpg" },
       { word: "La regla", img: "img/El material escolar/La regla.jpg" },
       { word: "El libro", img: "img/El material escolar/El libro.jpg" },
+      { word: "El estuche", img: "img/El material escolar/El estuche.jpg" }
+      { word: "El ordenador", img: "img/El material escolar/El ordenador.jpg" }
+      { word: "El portátil", img: "img/El material escolar/El portátil.jpg" }
+      { word: "La pizarra", img: "img/El material escolar/La pizarra.jpg" }
+      { word: "El cuaderno", img: "img/El material escolar/El cuaderno.jpg" }
+      { word: "El clip", img: "img/El material escolar/El clip.jpg" }
+      { word: "El pegamento", img: "img/El material escolar/El pegamento.jpg" }
+      { word: "La agenda", img: "img/El material escolar/La agenda.jpg" }
+      { word: "La mochila", img: "img/El material escolar/La mochila.jpg" }
       // { word: "", img: "img/El material escolar/.jpg" },
     ]},
 ];
+
 
 
