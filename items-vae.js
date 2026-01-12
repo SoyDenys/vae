@@ -239,9 +239,13 @@ const items = [
       { word: "El álbum de dibujo", img: "img/El material escolar/El álbum de dibujo.jpg" },
       // { word: "", img: "img/El material escolar/.jpg" },
     ]},
+    { id: "voc-semana", name: "Días de la semana", emoji: "📅", words: [
+      { word: "El lunes", img: "img/Días de la semana/El lunes.jpg" },
+      { word: "El martes", img: "img/Días de la semana/El martes.jpg" },
+      { word: "El miércoles", img: "img/Días de la semana/El miércoles.jpg" },
+      { word: "El jueves", img: "img/Días de la semana/El jueves.jpg" },
+      { word: "El viernes", img: "img/Días de la semana/El viernes.jpg" },
+      { word: "El sábado", img: "img/Días de la semana/El sábado.jpg" },
+      { word: "El domingo", img: "img/Días de la semana/El domingo.jpg" }
+    ]},
 ];
-
-
-
-
-
