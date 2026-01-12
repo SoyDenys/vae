@@ -226,9 +226,21 @@ const items = [
       { word: "El pegamento", img: "img/El material escolar/El pegamento.jpg" },
       { word: "La agenda", img: "img/El material escolar/La agenda.jpg" },
       { word: "La mochila", img: "img/El material escolar/La mochila.jpg" },
+      { word: "El globo terráqueo", img: "img/El material escolar/El globo terráqueo.jpg" },
+      { word: "El celo", img: "img/El material escolar/El celo.jpg" },
+      { word: "La grapadora", img: "img/El material escolar/La grapadora.jpg" },
+      { word: "Las grapas", img: "img/El material escolar/Las grapas.jpg" },
+      { word: "La tiza", img: "img/El material escolar/La tiza.jpg" },
+      { word: "Las ceras de colores", img: "img/El material escolar/Las ceras de colores.jpg" },
+      { word: "Los lápices de colores", img: "img/El material escolar/Los lápices de colores.jpg" },
+      { word: "El bloc", img: "img/El material escolar/El bloc.jpg" },
+      { word: "Las pinturas", img: "img/El material escolar/Las pinturas.jpg" },
+      { word: "El pincel", img: "img/El material escolar/El pincel.jpg" },
+      { word: "El álbum de dibujo", img: "img/El material escolar/El álbum de dibujo.jpg" },
       // { word: "", img: "img/El material escolar/.jpg" },
     ]},
 ];
+
 
 
 
