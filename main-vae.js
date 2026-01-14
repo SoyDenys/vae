@@ -28,9 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // чтобы не было ошибки, если showPage ещё не написан
-function showPage(x) {
-    console.log("showPage:", x);
-}
 
 function searchPage(categoryName) {
     let page = document.getElementById(categoryName);

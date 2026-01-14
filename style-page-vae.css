@@ -14,12 +14,55 @@ body {
     overflow-x: hidden;
 }
 
+.ico-img{
+    width: 50px;
+    height: auto;
+}
+
 .link-card{
     text-decoration: none !important;
 }
 
 .el-palabra{
     font-size: 2rem !important;
+}
+
+
+.center{
+    text-align: center;
+}
+
+.contact-info {
+    padding: 40px;
+    color: white;
+}
+.contact-info h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.contact-item-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    font-size: 18px;
+}
+.contact-item-text h4 {
+    color: white;
+    margin-bottom: 5px;
+}
+.contact-item-text p {
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .button-game {
@@ -398,6 +441,50 @@ nav {
 }
 
 
+
+/* Footer styles */
+#footer {
+    margin-top: 60px;
+    padding: 30px 0;
+}
+.footer-content {
+    padding: 30px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+}
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+.footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+    padding: 5px 10px;
+}
+.footer-links a:hover {
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+.copyright {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+}
+.copyright a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+}
+
+
+
+
+
 /* Responsive design */
 @media (max-width: 1024px) {
     .team-grid {
@@ -474,7 +561,6 @@ nav {
     .logo {
         font-size: 22px;
     }
-
 }
 
 @media (max-width: 500px) {
