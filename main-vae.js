@@ -56,7 +56,7 @@ function searchPage(categoryName) {
             <div class="content-wrapper">
                 <section class="team-section hero glass section-menu">
                     <h2>${category.name.toUpperCase()}</h2>
-                    <a href="#juego" class="cta-button" onclick="nuwGame('${categoryName}')">Jugar</a>
+                    <a href="#juego" class="cta-button" onclick="nuwGame('${categoryName}')"><img src="img/ico/game.png" class="ico-jugar">JUGAR</a>
                 </section>
                     <div class="team-grid" id="${categoryName}-grid"></div>
                 
