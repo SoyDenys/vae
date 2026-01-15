@@ -275,4 +275,5 @@ const items = [
     { "word": "El viernes", "img": "img/Días de la semana/El viernes.jpg", "transcript": "[el ˈβjeɾnes]" },
     { "word": "El sábado", "img": "img/Días de la semana/El sábado.jpg", "transcript": "[el ˈsaβaðo]" }
   ]
-},
+}
+];
