@@ -44,13 +44,13 @@ const items = [
       { word: "Los vaqueros", img: "img/La ropa/Los vaqueros.jpg" },
       { word: "Los pantalones", img: "img/La ropa/Los pantalones.jpg" }
     ]},
-  { id: "voc-frutas-1", name: "Las frutas", emoji: "🍎", words: [
+  { id: "voc-frutas", name: "Las frutas", emoji: "🍎", words: [
       { word: "Las frutas", img: "img/Las frutas/Las frutas.jpg" },
       { word: "La uva", img: "img/Las frutas/La uva.jpg" },
       { word: "La pera", img: "img/Las frutas/La pera.jpg" },
       { word: "La granada", img: "img/Las frutas/La granada.jpg" },
       { word: "La ciruela", img: "img/Las frutas/La ciruela.jpg" },
-      { word: "El plátano", img: "img/Las frutas/El plátano.jpg" },
+      { word: "El plátano", img: "img/Las frutas/El plátano.jpg", transcript: "[el ˈplatano]" },
       { word: "El coco", img: "img/Las frutas/El coco.jpg" },
       { word: "El albaricoque", img: "img/Las frutas/El albaricoque.jpg" },
       { word: "La piña", img: "img/Las frutas/La piña.jpg" },
@@ -64,7 +64,7 @@ const items = [
       { word: "La manzana", img: "img/Las frutas/La manzana.jpg" },
       { word: "La naranja", img: "img/Las frutas/La naranja.jpg" }
     ]},
-  { id: "voc-números-2", name: "Los números de 0 a 100", emoji: "🔢", words: [
+  { id: "voc-números", name: "Los números de 0 a 100", emoji: "🔢", words: [
       { word: "Cero", img: "img/Los números/Cero.jpg" },
       { word: "Uno", img: "img/Los números/Uno.jpg" },
       { word: "Dos", img: "img/Los números/Dos.jpg" },
@@ -167,7 +167,7 @@ const items = [
       { word: "Noventa y nueve", img: "img/Los números/Noventa y nueve.jpg" },
       { word: "Cien", img: "img/Los números/Cien.jpg" }
     ]},
-{ id: "voc-números", name: "Los números desde 100", emoji: "💯", words: [
+{ id: "voc-números-grande", name: "Los números desde 100", emoji: "💯", words: [
       { word: "Cien", img: "img/Los números/Cien.jpg" },
       { word: "Ciento uno", img: "img/Los números/Ciento uno.jpg" },
       { word: "Ciento once", img: "img/Los números/Ciento once.jpg" },

@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     items.forEach(item => {
         const link = document.createElement('a');
-        link.href = `#${item.name}`;
+        link.href = `#${item.name.replace(/\s+/g, '')}`;
         link.className = 'link-card';
         link.setAttribute('onclick', `searchPage('${item.id}')`);
 
@@ -76,7 +76,7 @@ function searchPage(categoryName) {
         card.innerHTML = `
             <img class="img-palabras" src="${wordObj.img}">
             <h3 class="el-palabra">${wordObj.word}</h3>
-        `;
+            ${wordObj.transcript ? `<h4 class="transcript">${wordObj.transcript}</h4>` : ``}`;
 
         grid.appendChild(card);
     });
@@ -88,30 +88,31 @@ function searchPage(categoryName) {
 
 // GAME
 
+var wordRight = "";
+
 function getRandomWord(categoryName) {
-    // находим категорию
     const category = items.find(item => item.id === categoryName);
 
-    if (!category) {
-        console.error("Такой категории нет:", categoryName);
+    if (!category || !category.words?.length) {
+        console.error("Категория пуста или не найдена:", categoryName);
         return null;
     }
 
-    const list = category.words;
+    const filteredWords = category.words.filter(
+        item => item.word !== wordRight
+    );
 
-    if (!list || list.length === 0) {
-        console.error("Нет слов в категории:", categoryName);
+    if (filteredWords.length === 0) {
+        console.warn("Нет слов, отличных от wordRight");
         return null;
     }
 
-    // рандомный индекс
-    const randIndex = Math.floor(Math.random() * list.length);
-
-    // возвращаем объект { word: "...", img: "..." }
-    return list[randIndex];
+    const randIndex = Math.floor(Math.random() * filteredWords.length);
+    return filteredWords[randIndex];
 }
 
-var wordRight;
+
+
 var wordOne;
 var wordTwo;
 
@@ -152,8 +153,6 @@ function gameRandomWord(categoryName){
     secondWord(categoryName, "1");
 
     let values = [wordRight, wordOne, wordTwo];
-
-    console.log(values)
     
     // перемешиваем значения
     shuffle(values);

@@ -14,7 +14,7 @@ let currentPage = 'home';
                 link.classList.remove('active');
                 if (link.getAttribute('onclick') === `showPage('${pageId}')`) {
                     link.classList.add('active');
-                    window.scrollTo(0, 0);
+                    // window.scrollTo(0, 0);
                 }
             });
             
