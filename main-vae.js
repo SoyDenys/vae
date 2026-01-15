@@ -164,6 +164,8 @@ function gameRandomWord(categoryName){
     console.log(wordRight)
 }
 
+let audioYes = new Audio('audio/sí.mp3');
+let audioNo = new Audio('audio/no.mp3');
 
 // перемешиваем массив Фишер–Йетс алгоритмом
 function shuffle(array) {
@@ -183,9 +185,13 @@ buttons.forEach(btn => {
       buttons.forEach(btn => {
         if (btn.textContent != wordRight)
             btn.classList.add("none");
+        audioYes.currentTime = 0;
+        audioYes.play();
       });
     } else {
       btn.classList.add("wrong");     // если неправильно (опционально)
+      audioNo.currentTime = 0;
+      audioNo.play();
     }
   });
 });
