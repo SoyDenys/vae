@@ -70,13 +70,18 @@ function searchPage(categoryName) {
     const grid = document.getElementById(`${categoryName}-grid`);
 
     category.words.forEach(wordObj => {
-        const card = document.createElement("div");
-        card.className = "team-member glass";
+        const card = document.createElement("a");
+        if(wordObj.audio){
+            card.addEventListener('click', () => { playAudio(wordObj.audio)});
+        }
+        
+        // card.className = "team-member glass";
 
         card.innerHTML = `
+            <div class="team-member glass">
             <img class="img-palabras" src="${wordObj.img}">
             <h3 class="el-palabra">${wordObj.word}</h3>
-            ${wordObj.transcript ? `<h4 class="transcript">${wordObj.transcript}</h4>` : ``}`;
+            ${wordObj.transcript ? `<h4 class="transcript">${wordObj.transcript}</h4>` : ``}</div>`;
 
         grid.appendChild(card);
     });
@@ -99,7 +104,7 @@ function getRandomWord(categoryName) {
     }
 
     const filteredWords = category.words.filter(
-        item => item.word !== wordRight
+        item => item.word !== wordRight.word
     );
 
     if (filteredWords.length === 0) {
@@ -127,7 +132,7 @@ const buttons = [
 function secondWord(categoryName, comand){
     let wordSecond = getRandomWord(categoryName).word;
     if (comand == '1'){
-        if (wordSecond != wordRight){
+        if (wordSecond != wordRight.word){
             wordOne = wordSecond;
             secondWord(categoryName, "2");
         }
@@ -136,7 +141,7 @@ function secondWord(categoryName, comand){
         }
     }
     else if(comand == '2'){
-        if (wordSecond != wordRight && wordSecond != wordOne){
+        if (wordSecond != wordRight.word && wordSecond != wordOne){
             wordTwo = wordSecond;
         }
         else{
@@ -147,24 +152,21 @@ function secondWord(categoryName, comand){
 
 function gameRandomWord(categoryName){
     let randomWord = getRandomWord(categoryName)
-    wordRight = randomWord.word;
+    wordRight = randomWord;
     document.getElementById('imgJugar').src = randomWord.img;
 
     secondWord(categoryName, "1");
 
-    let values = [wordRight, wordOne, wordTwo];
+    let values = [wordRight.word, wordOne, wordTwo];
     
     // перемешиваем значения
     shuffle(values);
 
     // распределяем
     buttons.forEach((btn, i) => {btn.textContent = values[i];});
-
-    
-    console.log(wordRight)
 }
 
-let audioYes = new Audio('audio/sí.mp3');
+let audioYes = new Audio('audio/sí.ogg');
 let audioNo = new Audio('audio/no.mp3');
 
 // перемешиваем массив Фишер–Йетс алгоритмом
@@ -175,19 +177,32 @@ function shuffle(array) {
   }
 }
 
+let audioStop = false;
 // навешиваем обработчики
 buttons.forEach(btn => {
   btn.addEventListener("click", () => {
+    if (btn.classList.contains("wrong") || btn.classList.contains("correct")){return;}
     // проверяем содержимое кнопки
-    if (btn.textContent === wordRight) {
+    if (btn.textContent === wordRight.word) {
       document.getElementById('btn-next').classList.remove("none");
       btn.classList.add("correct");   // если правильно
-      buttons.forEach(btn => {
-        if (btn.textContent != wordRight)
-            btn.classList.add("none");
         audioYes.currentTime = 0;
         audioYes.play();
-      });
+        if (wordRight.audio && !audioStop){
+            let timeOutAudio = wordRight.audio;
+            setTimeout(() => {
+                if(audioStop){
+                    let wordAudio = new Audio(timeOutAudio);
+                    wordAudio.currentTime = 0;
+                    wordAudio.play();
+                }
+                audioStop = false;  
+            }, 1000);
+            audioStop = true;
+        };
+        
+      buttons.forEach(btn => {
+        if (btn.textContent != wordRight.word){btn.classList.add("none");}});
     } else {
       btn.classList.add("wrong");     // если неправильно (опционально)
       audioNo.currentTime = 0;
@@ -196,12 +211,8 @@ buttons.forEach(btn => {
   });
 });
 
-
-// function checkWord(checkbtn){
-//     if (checkbtn.textContent == wordRight)
-// }
-
 document.getElementById('btn-next').addEventListener("click", () => {
+    audioStop = false;
     document.getElementById('btn-next').classList.add("none");
     buttons.forEach(btn => {btn.classList.remove("wrong", "correct", "none");});
     gameRandomWord(gameTema);
@@ -212,4 +223,10 @@ function nuwGame (tema){
     gameTema = tema;
     gameRandomWord(gameTema);
     showPage('game');
+}
+
+function playAudio(path){
+    let audioPath = new Audio(path);
+    audioPath.currentTime = 0;
+    audioPath.play();
 }
