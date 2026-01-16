@@ -177,7 +177,7 @@ function shuffle(array) {
   }
 }
 
-let audioStop = false;
+let audioStop = true;
 // навешиваем обработчики
 buttons.forEach(btn => {
   btn.addEventListener("click", () => {
@@ -188,7 +188,7 @@ buttons.forEach(btn => {
       btn.classList.add("correct");   // если правильно
         audioYes.currentTime = 0;
         audioYes.play();
-        if (wordRight.audio && !audioStop){
+        if (wordRight.audio){
             let timeOutAudio = wordRight.audio;
             setTimeout(() => {
                 if(audioStop){
@@ -197,7 +197,7 @@ buttons.forEach(btn => {
                     wordAudio.play();
                 }
                 audioStop = false;  
-            }, 1000);
+            }, 700);
             audioStop = true;
         };
         
