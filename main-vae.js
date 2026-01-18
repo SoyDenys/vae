@@ -4,9 +4,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     items.forEach(item => {
         const link = document.createElement('a');
-        link.href = `#${item.name.replace(/\s+/g, '')}`;
+        // link.href = `#${item.name.replace(/\s+/g, '')}`;
         link.className = 'link-card';
-        link.setAttribute('onclick', `searchPage('${item.id}')`);
+        link.setAttribute('onclick', `searchPage('${item.name.replace(/\s+/g, '')}')`);
 
         const member = document.createElement('div');
         member.className = 'team-member glass';
@@ -29,11 +29,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // чтобы не было ошибки, если showPage ещё не написан
 
+let category;
+
 function searchPage(categoryName) {
     let page = document.getElementById(categoryName);
 
     // Ищем раздел с такими данными
-    const category = items.find(item => item.id === categoryName);
+    category = items.find(item =>  `${item.name.replace(/\s+/g, '')}` === categoryName);
 
     if (!category) {
         console.error("Категория не найдена:", categoryName);
@@ -46,6 +48,11 @@ function searchPage(categoryName) {
         return;
     }
 
+    let buttonsPlay = 0;
+
+    // <a class="cta-button" onclick="nuwGame('${categoryName}')"><img src="img/ico/Escribir.png" class="ico-jugar">ESCRIBIR</a>
+
+    category.words.forEach(wordObj => {if(wordObj.audio){ buttonsPlay = buttonsPlay + 1; }});
     // --- Создаём страницу ---
     page = document.createElement("div");
     page.id = categoryName;
@@ -56,7 +63,8 @@ function searchPage(categoryName) {
             <div class="content-wrapper">
                 <section class="team-section hero glass section-menu">
                     <h2>${category.name.toUpperCase()}</h2>
-                    <a href="#juego" class="cta-button" onclick="nuwGame('${categoryName}')"><img src="img/ico/game.png" class="ico-jugar">JUGAR</a>
+                    <a class="cta-button" onclick="nuwGame('${categoryName}')"><img src="img/ico/Pruebas.png" class="ico-jugar">PRUEBAS</a>
+                    ${buttonsPlay >= 3 ? `<a class="cta-button" onclick="startEscuchar()"><img src="img/ico/Escuchar.png" class="ico-jugar">ESCUCHAR</a>` : ``}
                 </section>
                     <div class="team-grid" id="${categoryName}-grid"></div>
                 
@@ -69,8 +77,10 @@ function searchPage(categoryName) {
     // --- Заполняем блоки слов ---
     const grid = document.getElementById(`${categoryName}-grid`);
 
+
     category.words.forEach(wordObj => {
         const card = document.createElement("a");
+        card.classList.toggle('cursor-none', !wordObj.audio);
         if(wordObj.audio){
             card.addEventListener('click', () => { playAudio(wordObj.audio)});
         }
@@ -96,7 +106,8 @@ function searchPage(categoryName) {
 var wordRight = "";
 
 function getRandomWord(categoryName) {
-    const category = items.find(item => item.id === categoryName);
+    
+
 
     if (!category || !category.words?.length) {
         console.error("Категория пуста или не найдена:", categoryName);
@@ -177,7 +188,7 @@ function shuffle(array) {
   }
 }
 
-let audioStop = true;
+
 // навешиваем обработчики
 buttons.forEach(btn => {
   btn.addEventListener("click", () => {
@@ -191,14 +202,10 @@ buttons.forEach(btn => {
         if (wordRight.audio){
             let timeOutAudio = wordRight.audio;
             setTimeout(() => {
-                if(audioStop){
                     let wordAudio = new Audio(timeOutAudio);
                     wordAudio.currentTime = 0;
-                    wordAudio.play();
-                }
-                audioStop = false;  
-            }, 700);
-            audioStop = true;
+                    wordAudio.play(); 
+            }, 500);
         };
         
       buttons.forEach(btn => {
@@ -212,21 +219,239 @@ buttons.forEach(btn => {
 });
 
 document.getElementById('btn-next').addEventListener("click", () => {
-    audioStop = false;
     document.getElementById('btn-next').classList.add("none");
     buttons.forEach(btn => {btn.classList.remove("wrong", "correct", "none");});
     gameRandomWord(gameTema);
 });
 
+function clianPruebas(){
+    document.getElementById('btn-next').classList.add("none");
+    buttons.forEach(btn => {btn.classList.remove("wrong", "correct", "none");});
+}
+
 
 function nuwGame (tema){
     gameTema = tema;
+    clianPruebas();
     gameRandomWord(gameTema);
     showPage('game');
+}
+
+function startEscuchar (){
+    clianEscuchar();
+    showPage('escuchar');
+    escucharPalabras(category.name);
+    
 }
 
 function playAudio(path){
     let audioPath = new Audio(path);
     audioPath.currentTime = 0;
     audioPath.play();
+}
+
+let revolver = false;
+let pausa = false;
+
+function escucharMenuBatton(comand){
+    if (comand.id == "pausa"){
+        document.getElementById(comand.id).classList.add("none");
+        document.getElementById("reproducir").classList.remove("none");
+        pausa = true;
+
+    } else if (comand.id == "reproducir"){
+        document.getElementById(comand.id).classList.add("none");
+        document.getElementById("pausa").classList.remove("none");
+        pausa = false;
+        escucharPalabras(category.name);
+
+    } else if (comand.id == "no-revolver"){
+        document.getElementById(comand.id).classList.add("none");
+        document.getElementById("revolver").classList.remove("none");
+
+        revolver = true;   // ➡️ обычный порядок
+        toggleRevolver();
+
+    } else if (comand.id == "revolver"){
+        document.getElementById(comand.id).classList.add("none");
+        document.getElementById("no-revolver").classList.remove("none");
+
+        revolver = false;    // 🔀 случайный порядок
+        toggleRevolver();
+    }
+}
+
+
+let escucharIndex = 0;
+let escucharOrder = [];
+let escucharTimeout = null;
+let escucharCategory = null;
+let escucharCurrentWordIndex = null; // индекс слова в category.words
+
+
+function detenerEscuchar() {
+    if (escucharTimeout) {
+        clearTimeout(escucharTimeout);
+        escucharTimeout = null;
+    }
+}
+
+
+function reconstruirOrden(words, currentIndex, random) {
+    let order = words.map((_, i) => i);
+
+    if (random) {
+        order = order.filter(i => i !== currentIndex);
+        shuffle(order);
+        order.unshift(currentIndex);
+    }
+
+    return order;
+}
+
+
+// function toggleRevolver() {
+//     if (!escucharCategory || escucharCurrentWordIndex === null) return;
+
+//     // пересобираем порядок с учётом режима
+//     escucharOrder = reconstruirOrden(
+//         escucharCategory.words,
+//         escucharCurrentWordIndex,
+//         revolver
+//     );
+
+//     // находим позицию текущего слова в новом порядке
+//     let pos = escucharOrder.indexOf(escucharCurrentWordIndex);
+
+//     // 🔑 Чтобы не повторять текущее слово, идём на следующий
+//     escucharIndex = (pos + 1) % escucharOrder.length;
+// }
+
+
+function toggleRevolver() {
+    if (!escucharCategory || escucharCurrentWordIndex === null) return;
+
+    // ⛔ ОЧЕНЬ ВАЖНО
+    detenerEscuchar();
+
+    escucharOrder = reconstruirOrden(
+        escucharCategory.words,
+        escucharCurrentWordIndex,
+        revolver
+    );
+
+    const pos = escucharOrder.indexOf(escucharCurrentWordIndex);
+    escucharIndex = (pos + 1) % escucharOrder.length;
+
+    // ▶️ запускаем дальше вручную
+    escucharPalabras(category.name);
+}
+
+let lastPlayedIndex = null;
+
+
+function escucharPalabras(categoryName) {
+    // режим "escuchar" должен быть активен
+    if (!document.getElementById("escuchar")?.classList.contains("active")) {
+        detenerEscuchar();
+        return;
+    }
+
+    // если уже запущено — не запускаем повторно
+    if (escucharTimeout) return;
+
+    // инициализация категории
+    if (!escucharCategory || escucharCategory.name !== categoryName) {
+        escucharCategory = items.find(item => item.name === categoryName);
+
+        if (!escucharCategory || !escucharCategory.words?.length) {
+            console.error("Категория не найдена:", categoryName);
+            return;
+        }
+
+        escucharCurrentWordIndex = 0;
+        escucharIndex = 0;
+        escucharOrder = reconstruirOrden(
+            escucharCategory.words,
+            escucharCurrentWordIndex,
+            revolver
+        );
+    }
+
+    function playNext() {
+        // режим выключен
+        if (!document.getElementById("escuchar")?.classList.contains("active")) {
+            detenerEscuchar();
+            return;
+        }
+
+        // пауза
+        if (pausa) {
+            escucharTimeout = null;
+            return;
+        }
+
+        let wordIndex = escucharOrder[escucharIndex];
+        escucharCurrentWordIndex = wordIndex;
+
+        // ⛔ защита от повтора того же слова
+        if (wordIndex === lastPlayedIndex) {
+            escucharIndex = (escucharIndex + 1) % escucharOrder.length;
+            wordIndex = escucharOrder[escucharIndex];
+        }
+
+        lastPlayedIndex = wordIndex;
+        escucharCurrentWordIndex = wordIndex;
+
+        const wordObj = escucharCategory.words[wordIndex];
+
+        // ⬇️ ОСТАВЛЕНО ТОЧНО КАК ТЫ ПРОСИЛ
+        if (wordObj.img) {
+            document.getElementById('img-escuchar').src = wordObj.img;
+        }
+
+        if (wordObj.word) {
+            document.getElementById('text-escuchar').textContent = wordObj.word;
+        }
+
+        let delay = 2000;
+
+        if (wordObj.audio) {
+            const audio = new Audio(wordObj.audio);
+            audio.onloadedmetadata = () => {
+                delay = (audio.duration * 1000) + 1000;
+            };
+            audio.play().catch(() => {});
+        }
+
+        escucharIndex++;
+
+        // зацикливание
+        if (escucharIndex >= escucharOrder.length) {
+            escucharIndex = 0;
+            escucharOrder = reconstruirOrden(
+                escucharCategory.words,
+                escucharCurrentWordIndex,
+                revolver
+            );
+        }
+
+        escucharTimeout = setTimeout(() => {
+            escucharTimeout = null;
+            playNext();
+        }, delay);
+    }
+
+    playNext();
+}
+
+
+function clianEscuchar(){
+    revolver = false;
+    pausa = false;
+    document.getElementById("pausa").classList.remove("none");
+    document.getElementById("no-revolver").classList.remove("none");
+    document.getElementById("reproducir").classList.add("none");
+    document.getElementById("revolver").classList.add("none");
+
 }

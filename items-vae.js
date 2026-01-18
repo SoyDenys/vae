@@ -35,18 +35,18 @@ const items = [
   name: "La ropa",
   emoji: "👕",
   words: [
-    { word: "El abrigo", img: "img/La ropa/El abrigo.jpg", transcript: "[el aˈβɾiɣo]" },
-    { word: "El jersey", img: "img/La ropa/El jersey.jpg", transcript: "[el xeɾˈsej]" },
-    { word: "El traje", img: "img/La ropa/El traje.jpg", transcript: "[el ˈtɾaxe]" },
-    { word: "La camisa", img: "img/La ropa/La camisa.jpg", transcript: "[la kaˈmisa]" },
-    { word: "El vestido", img: "img/La ropa/El vestido.jpg", transcript: "[el besˈtiðo]" },
-    { word: "La camiseta", img: "img/La ropa/La camiseta.jpg", transcript: "[la kamiˈseta]" },
-    { word: "La chaqueta", img: "img/La ropa/La chaqueta.jpg", transcript: "[la tʃaˈketa]" },
-    { word: "La pijama", img: "img/La ropa/La pijama.jpg", transcript: "[la piˈxama]" },
-    { word: "La falda", img: "img/La ropa/La falda.jpg", transcript: "[la ˈfalda]" },
-    { word: "Los pantalones cortos", img: "img/La ropa/Los pantalones cortos.jpg", transcript: "[los pantaˈlones ˈkoɾtos]" },
-    { word: "Los vaqueros", img: "img/La ropa/Los vaqueros.jpg", transcript: "[los baˈkeɾos]" },
-    { word: "Los pantalones", img: "img/La ropa/Los pantalones.jpg", transcript: "[los pantaˈlones]" }
+    { word: "El abrigo", img: "img/La ropa/El abrigo.jpg", transcript: "[el aˈβɾiɣo]", audio: "audio/La ropa/El abrigo.ogg" },
+    { word: "El jersey", img: "img/La ropa/El jersey.jpg", transcript: "[el xeɾˈsej]", audio: "audio/La ropa/El jersey.ogg" },
+    { word: "El traje", img: "img/La ropa/El traje.jpg", transcript: "[el ˈtɾaxe]", audio: "audio/La ropa/El traje.ogg" },
+    { word: "La camisa", img: "img/La ropa/La camisa.jpg", transcript: "[la kaˈmisa]", audio: "audio/La ropa/La camisa.ogg" },
+    { word: "El vestido", img: "img/La ropa/El vestido.jpg", transcript: "[el besˈtiðo]", audio: "audio/La ropa/El vestido.ogg" },
+    { word: "La camiseta", img: "img/La ropa/La camiseta.jpg", transcript: "[la kamiˈseta]", audio: "audio/La ropa/La camiseta.ogg" },
+    { word: "La chaqueta", img: "img/La ropa/La chaqueta.jpg", transcript: "[la tʃaˈketa]", audio: "audio/La ropa/La chaqueta.ogg" },
+    { word: "La pijama", img: "img/La ropa/La pijama.jpg", transcript: "[la piˈxama]", audio: "audio/La ropa/La pijama.ogg" },
+    { word: "La falda", img: "img/La ropa/La falda.jpg", transcript: "[la ˈfalda]", audio: "audio/La ropa/La falda.ogg" },
+    { word: "Los pantalones cortos", img: "img/La ropa/Los pantalones cortos.jpg", transcript: "[los pantaˈlones ˈkoɾtos]", audio: "audio/La ropa/Los pantalones cortos.ogg" },
+    { word: "Los vaqueros", img: "img/La ropa/Los vaqueros.jpg", transcript: "[los baˈkeɾos]", audio: "audio/La ropa/Los vaqueros.ogg" },
+    { word: "Los pantalones", img: "img/La ropa/Los pantalones.jpg", transcript: "[los pantaˈlones]", audio: "audio/La ropa/Los pantalones.ogg" }
   ]
 },
 {
