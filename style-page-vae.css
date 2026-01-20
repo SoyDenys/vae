@@ -18,9 +18,10 @@ a{
     cursor: pointer;
 }
 
-h2#text-escuchar {
+#text-escuchar {
     height: 100px;
     margin: 0 !important;
+    font-size: 2rem;
 }
 .cursor-none{
     cursor: default !important;
