@@ -419,7 +419,7 @@ function escucharPalabras(categoryName) {
         if (wordObj.audio) {
             const audio = new Audio(wordObj.audio);
             audio.onloadedmetadata = () => {
-                delay = (audio.duration * 1000) + 1000;
+                delay = (audio.duration * 1000) + 1500;
             };
             audio.play().catch(() => {});
         }
@@ -453,5 +453,6 @@ function clianEscuchar(){
     document.getElementById("no-revolver").classList.remove("none");
     document.getElementById("reproducir").classList.add("none");
     document.getElementById("revolver").classList.add("none");
+
 
 }
