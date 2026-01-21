@@ -291,7 +291,12 @@ const items = [
     { "word": "El taxista", "img": "img/Las profesiones/El taxista.jpg", "transcript": "[el takˈsista]" },
     { "word": "La taxista", "img": "img/Las profesiones/La taxista.jpg", "transcript": "[la takˈsista]" },
     { "word": "El modelo", "img": "img/Las profesiones/El modelo.jpg", "transcript": "[el moˈðelo]" },
-    { "word": "La modelo", "img": "img/Las profesiones/La modelo.jpg", "transcript": "[la moˈðelo]" }
+    { "word": "La modelo", "img": "img/Las profesiones/La modelo.jpg", "transcript": "[la moˈðelo]" },
+    { "word": "El cantante", "img": "img/Las profesiones/El cantante.jpg", "transcript": "[el kanˈtante]" },
+    { "word": "La cantante", "img": "img/Las profesiones/La cantante.jpg", "transcript": "[la kanˈtante]" },
+    { "word": "El pianista", "img": "img/Las profesiones/El pianista.jpg", "transcript": "[el pjaˈnista]" },
+    { "word": "La pianista", "img": "img/Las profesiones/La pianista.jpg", "transcript": "[la pjaˈnista]" }
   ]
 }
 ];
+
