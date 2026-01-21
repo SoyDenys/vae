@@ -276,5 +276,22 @@ const items = [
     { "word": "El sábado", "img": "img/Días de la semana/El sábado.jpg", "transcript": "[el ˈsaβaðo]", audio: "audio/Días de la semana/El sábado.ogg" },
     { "word": "El domingo", "img": "img/Días de la semana/El domingo.jpg", "transcript": "[el doˈminɡo]", audio: "audio/Días de la semana/El domingo.ogg" }
   ]
+},
+{
+  "id": "voc-profesiones",
+  "name": "Las profesiones",
+  "emoji": "💼",
+  "words": [
+    { "word": "El periodista", "img": "img/Las profesiones/El periodista.jpg", "transcript": "[el peɾjoˈðista]" },
+    { "word": "La periodista", "img": "img/Las profesiones/La periodista.jpg", "transcript": "[la peɾjoˈðista]" },
+    { "word": "El cocinero", "img": "img/Las profesiones/El cocinero.jpg", "transcript": "[el koθiˈneɾo]" },
+    { "word": "La cocinera", "img": "img/Las profesiones/La cocinera.jpg", "transcript": "[la koθiˈneɾa]" },
+    { "word": "El piloto", "img": "img/Las profesiones/El piloto.jpg", "transcript": "[el piˈloto]" },
+    { "word": "La piloto", "img": "img/Las profesiones/La piloto.jpg", "transcript": "[la piˈloto]" },
+    { "word": "El taxista", "img": "img/Las profesiones/El taxista.jpg", "transcript": "[el takˈsista]" },
+    { "word": "La taxista", "img": "img/Las profesiones/La taxista.jpg", "transcript": "[la takˈsista]" },
+    { "word": "El modelo", "img": "img/Las profesiones/El modelo.jpg", "transcript": "[el moˈðelo]" },
+    { "word": "La modelo", "img": "img/Las profesiones/La modelo.jpg", "transcript": "[la moˈðelo]" }
+  ]
 }
 ];
