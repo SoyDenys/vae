@@ -282,21 +282,22 @@ const items = [
   "name": "Las profesiones",
   "emoji": "💼",
   "words": [
-    { "word": "El periodista", "img": "img/Las profesiones/El periodista.jpg", "transcript": "[el peɾjoˈðista]" },
-    { "word": "La periodista", "img": "img/Las profesiones/La periodista.jpg", "transcript": "[la peɾjoˈðista]" },
-    { "word": "El cocinero", "img": "img/Las profesiones/El cocinero.jpg", "transcript": "[el koθiˈneɾo]" },
-    { "word": "La cocinera", "img": "img/Las profesiones/La cocinera.jpg", "transcript": "[la koθiˈneɾa]" },
-    { "word": "El piloto", "img": "img/Las profesiones/El piloto.jpg", "transcript": "[el piˈloto]" },
-    { "word": "La piloto", "img": "img/Las profesiones/La piloto.jpg", "transcript": "[la piˈloto]" },
-    { "word": "El taxista", "img": "img/Las profesiones/El taxista.jpg", "transcript": "[el takˈsista]" },
-    { "word": "La taxista", "img": "img/Las profesiones/La taxista.jpg", "transcript": "[la takˈsista]" },
-    { "word": "El modelo", "img": "img/Las profesiones/El modelo.jpg", "transcript": "[el moˈðelo]" },
-    { "word": "La modelo", "img": "img/Las profesiones/La modelo.jpg", "transcript": "[la moˈðelo]" },
-    { "word": "El cantante", "img": "img/Las profesiones/El cantante.jpg", "transcript": "[el kanˈtante]" },
-    { "word": "La cantante", "img": "img/Las profesiones/La cantante.jpg", "transcript": "[la kanˈtante]" },
-    { "word": "El pianista", "img": "img/Las profesiones/El pianista.jpg", "transcript": "[el pjaˈnista]" },
-    { "word": "La pianista", "img": "img/Las profesiones/La pianista.jpg", "transcript": "[la pjaˈnista]" }
+    { "word": "El periodista", "img": "img/Las profesiones/El periodista.jpg", "transcript": "[el peɾjoˈðista]", audio: "audio/Las profesiones/El periodista.ogg" },
+    { "word": "La periodista", "img": "img/Las profesiones/La periodista.jpg", "transcript": "[la peɾjoˈðista]", audio: "audio/Las profesiones/La periodista.ogg" },
+    { "word": "El cocinero", "img": "img/Las profesiones/El cocinero.jpg", "transcript": "[el koθiˈneɾo]", audio: "audio/Las profesiones/El cocinero.ogg" },
+    { "word": "La cocinera", "img": "img/Las profesiones/La cocinera.jpg", "transcript": "[la koθiˈneɾa]", audio: "audio/Las profesiones/La cocinera.ogg" },
+    { "word": "El piloto", "img": "img/Las profesiones/El piloto.jpg", "transcript": "[el piˈloto]", audio: "audio/Las profesiones/El piloto.ogg" },
+    { "word": "La piloto", "img": "img/Las profesiones/La piloto.jpg", "transcript": "[la piˈloto]", audio: "audio/Las profesiones/La piloto.ogg" },
+    { "word": "El taxista", "img": "img/Las profesiones/El taxista.jpg", "transcript": "[el takˈsista]", audio: "audio/Las profesiones/El taxista.ogg" },
+    { "word": "La taxista", "img": "img/Las profesiones/La taxista.jpg", "transcript": "[la takˈsista]", audio: "audio/Las profesiones/La taxista.ogg" },
+    { "word": "El modelo", "img": "img/Las profesiones/El modelo.jpg", "transcript": "[el moˈðelo]", audio: "audio/Las profesiones/El modelo.ogg" },
+    { "word": "La modelo", "img": "img/Las profesiones/La modelo.jpg", "transcript": "[la moˈðelo]", audio: "audio/Las profesiones/La modelo.ogg" },
+    { "word": "El cantante", "img": "img/Las profesiones/El cantante.jpg", "transcript": "[el kanˈtante]", audio: "audio/Las profesiones/El cantante.ogg" },
+    { "word": "La cantante", "img": "img/Las profesiones/La cantante.jpg", "transcript": "[la kanˈtante]", audio: "audio/Las profesiones/La cantante.ogg" },
+    { "word": "El pianista", "img": "img/Las profesiones/El pianista.jpg", "transcript": "[el pjaˈnista]", audio: "audio/Las profesiones/El pianista.ogg" },
+    { "word": "La pianista", "img": "img/Las profesiones/La pianista.jpg", "transcript": "[la pjaˈnista]", audio: "audio/Las profesiones/La pianista.ogg" }
   ]
 }
 ];
+
 
