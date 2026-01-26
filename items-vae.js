@@ -295,9 +295,37 @@ const items = [
     { "word": "El cantante", "img": "img/Las profesiones/El cantante.jpg", "transcript": "[el kanˈtante]", audio: "audio/Las profesiones/El cantante.ogg" },
     { "word": "La cantante", "img": "img/Las profesiones/La cantante.jpg", "transcript": "[la kanˈtante]", audio: "audio/Las profesiones/La cantante.ogg" },
     { "word": "El pianista", "img": "img/Las profesiones/El pianista.jpg", "transcript": "[el pjaˈnista]", audio: "audio/Las profesiones/El pianista.ogg" },
-    { "word": "La pianista", "img": "img/Las profesiones/La pianista.jpg", "transcript": "[la pjaˈnista]", audio: "audio/Las profesiones/La pianista.ogg" }
+    { "word": "La pianista", "img": "img/Las profesiones/La pianista.jpg", "transcript": "[la pjaˈnista]", audio: "audio/Las profesiones/La pianista.ogg" },
+    { "word": "El reportero", "img": "img/Las profesiones/El reportero.jpg", "transcript": "[el repoɾˈteɾo]", audio: "audio/Las profesiones/El reportero.ogg" },
+    { "word": "La reportera", "img": "img/Las profesiones/La reportera.jpg", "transcript": "[la repoɾˈteɾa]", audio: "audio/Las profesiones/La reportera.ogg" },
+    { "word": "El actor", "img": "img/Las profesiones/El actor.jpg", "transcript": "[el akˈtoɾ]", audio: "audio/Las profesiones/El actor.ogg" },
+    { "word": "La actriz", "img": "img/Las profesiones/La actriz.jpg", "transcript": "[la akˈtɾiθ]", audio: "audio/Las profesiones/La actriz.ogg" },
+    { "word": "El dependiente", "img": "img/Las profesiones/El dependiente.jpg", "transcript": "[el depenˈdjente]", audio: "audio/Las profesiones/El dependiente.ogg" },
+    { "word": "La dependienta", "img": "img/Las profesiones/La dependienta.jpg", "transcript": "[la depenˈdjenta]", audio: "audio/Las profesiones/La dependienta.ogg" },
+    { "word": "El electricista", "img": "img/Las profesiones/El electricista.jpg", "transcript": "[el elektɾiˈθista]", audio: "audio/Las profesiones/El electricista.ogg" },
+    { "word": "La electricista", "img": "img/Las profesiones/La electricista.jpg", "transcript": "[la elektɾiˈθista]", audio: "audio/Las profesiones/La electricista.ogg" },
+    { "word": "El escritor", "img": "img/Las profesiones/El escritor.jpg", "transcript": "[el eskɾiˈtoɾ]", audio: "audio/Las profesiones/El escritor.ogg" },
+    { "word": "La escritora", "img": "img/Las profesiones/La escritora.jpg", "transcript": "[la eskɾiˈtoɾa]", audio: "audio/Las profesiones/La escritora.ogg" },
+    { "word": "El médico", "img": "img/Las profesiones/El médico.jpg", "transcript": "[el ˈmeðiko]", audio: "audio/Las profesiones/El médico.ogg" },
+    { "word": "La médica", "img": "img/Las profesiones/La médica.jpg", "transcript": "[la ˈmeðika]", audio: "audio/Las profesiones/La médica.ogg" },
+    { "word": "El pintor", "img": "img/Las profesiones/El pintor.jpg", "transcript": "[el pinˈtoɾ]", audio: "audio/Las profesiones/El pintor.ogg" },
+    { "word": "La pintora", "img": "img/Las profesiones/La pintora.jpg", "transcript": "[la pinˈtoɾa]", audio: "audio/Las profesiones/La pintora.ogg" },
+    { "word": "El profesor", "img": "img/Las profesiones/El profesor.jpg", "transcript": "[el pɾofeˈsoɾ]", audio: "audio/Las profesiones/El profesor.ogg" },
+    { "word": "La profesora", "img": "img/Las profesiones/La profesora.jpg", "transcript": "[la pɾofeˈsoɾa]", audio: "audio/Las profesiones/La profesora.ogg" },
+
+    // { "word": "", "img": "img/Las profesiones/.jpg", "transcript": "[]", audio: "audio/Las profesiones/.ogg" },
+  ]
+},
+{
+  "id": "voc-estaciones",
+  "name": "Las estaciones del año",
+  "emoji": "☃️",
+  "words": [
+    { "word": "La primavera", "img": "img/Las estaciones del año/La primavera.jpg", "transcript": "[la pɾimaˈβeɾa]", audio: "audio/Las estaciones del año/La primavera.ogg" },
+    { "word": "El verano", "img": "img/Las estaciones del año/El verano.jpg", "transcript": "[el βeˈɾano]", audio: "audio/Las estaciones del año/El verano.ogg" },
+    { "word": "El otoño", "img": "img/Las estaciones del año/El otoño.jpg", "transcript": "[el oˈtoɲo]", audio: "audio/Las estaciones del año/El otoño.ogg" },
+    { "word": "El invierno", "img": "img/Las estaciones del año/El invierno.jpg", "transcript": "[el imˈβjeɾno]", audio: "audio/Las estaciones del año/El invierno.ogg" }
   ]
 }
 ];
-
 
