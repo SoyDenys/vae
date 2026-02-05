@@ -14,6 +14,31 @@ body {
     overflow-x: hidden;
 }
 
+.margin-bottom{
+    margin-bottom: 2%;
+    padding: 2%
+}
+
+h3{
+    text-align: center;
+    color: white;
+}
+
+p{
+    color: white;
+}
+
+.italic {
+    color: #ffffffd4;
+    font-style: italic;
+}
+
+.a-link{
+    color: rgb(181 255 174);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
 a{
     cursor: pointer;
 }
@@ -59,7 +84,9 @@ a{
     padding: 40px;
     color: white;
 }
-.contact-info h2 {
+.contact-info h2, h2 {
+    text-align: center;
+    color: white;
     font-size: 2rem;
     margin-bottom: 30px;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
