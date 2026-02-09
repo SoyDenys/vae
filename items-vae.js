@@ -326,6 +326,25 @@ const items = [
     { "word": "El otoño", "img": "img/Las estaciones del año/El otoño.jpg", "transcript": "[el oˈtoɲo]", audio: "audio/Las estaciones del año/El otoño.ogg" },
     { "word": "El invierno", "img": "img/Las estaciones del año/El invierno.jpg", "transcript": "[el imˈβjeɾno]", audio: "audio/Las estaciones del año/El invierno.ogg" }
   ]
+},
+{
+  "id": "voc-meses",
+  "name": "Los meses del año",
+  "emoji": "🗓",
+  "words": [
+    { "word": "Enero", "img": "img/Los meses del año/Enero.jpg", "transcript": "[eˈneɾo]", audio: "audio/Los meses del año/Enero.ogg" },
+    { "word": "Febrero", "img": "img/Los meses del año/Febrero.jpg", "transcript": "[feˈβɾeɾo]", audio: "audio/Los meses del año/Febrero.ogg" },
+    { "word": "Marzo", "img": "img/Los meses del año/Marzo.jpg", "transcript": "[ˈmaɾθo]", audio: "audio/Los meses del año/Marzo.ogg" },
+    { "word": "Abril", "img": "img/Los meses del año/Abril.jpg", "transcript": "[aˈβɾil]", audio: "audio/Los meses del año/Abril.ogg" },
+    { "word": "Mayo", "img": "img/Los meses del año/Mayo.jpg", "transcript": "[ˈmaʝo]", audio: "audio/Los meses del año/Mayo.ogg" },
+    { "word": "Junio", "img": "img/Los meses del año/Junio.jpg", "transcript": "[ˈxunjo]", audio: "audio/Los meses del año/Junio.ogg" },
+    { "word": "Julio", "img": "img/Los meses del año/Julio.jpg", "transcript": "[ˈxuljo]", audio: "audio/Los meses del año/Julio.ogg" },
+    { "word": "Agosto", "img": "img/Los meses del año/Agosto.jpg", "transcript": "[aˈɣosto]", audio: "audio/Los meses del año/Agosto.ogg" },
+    { "word": "Septiembre", "img": "img/Los meses del año/Septiembre.jpg", "transcript": "[sepˈtjemβɾe]", audio: "audio/Los meses del año/Septiembre.ogg" },
+    { "word": "Octubre", "img": "img/Los meses del año/Octubre.jpg", "transcript": "[okˈtuβɾe]", audio: "audio/Los meses del año/Octubre.ogg" },
+    { "word": "Noviembre ", "img": "img/Los meses del año/Noviembre.jpg", "transcript": "[noˈβjemβɾe]", audio: "audio/Los meses del año/Noviembre.ogg" },
+    { "word": "Diciembre ", "img": "img/Los meses del año/Diciembre.jpg", "transcript": "[diˈθjemβɾe]", audio: "audio/Los meses del año/Diciembre.ogg" },
+  ]
 }
 ];
 
