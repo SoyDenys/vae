@@ -420,6 +420,28 @@ const items = [
     { "word": "Noviembre ", "img": "img/Los meses del año/Noviembre.jpg", "transcript": "[noˈβjemβɾe]", audio: "audio/Los meses del año/Noviembre.ogg" },
     { "word": "Diciembre ", "img": "img/Los meses del año/Diciembre.jpg", "transcript": "[diˈθjemβɾe]", audio: "audio/Los meses del año/Diciembre.ogg" },
   ]
+},
+{
+  "id": "voc-colores",
+  "name": "Los colores",
+  "emoji": "🎨",
+  "words": [
+    { "word": "Rojo", "img": "img/Los colores/Rojo.jpg", "transcript": "[ˈroxo]", audio: "audio/Los colores/Rojo.ogg" },
+    { "word": "Naranja", "img": "img/Los colores/Naranja.jpg", "transcript": "[naˈɾanxa]", audio: "audio/Los colores/Naranja.ogg" },
+    { "word": "Amarillo", "img": "img/Los colores/Amarillo.jpg", "transcript": "[amaˈɾiʝo]", audio: "audio/Los colores/Amarillo.ogg" },
+    { "word": "Rosa", "img": "img/Los colores/Rosa.jpg", "transcript": "[ˈrosa]", audio: "audio/Los colores/Rosa.ogg" },
+    { "word": "Verde", "img": "img/Los colores/Verde.jpg", "transcript": "[ˈbeɾðe]", audio: "audio/Los colores/Verde.ogg" },
+    { "word": "Verde claro", "img": "img/Los colores/Verde claro.jpg", "transcript": "[ˈbeɾðe ˈklaɾo]", audio: "audio/Los colores/Verde claro.ogg" },
+    { "word": "Azul", "img": "img/Los colores/Azul.jpg", "transcript": "[aˈθul]", audio: "audio/Los colores/Azul.ogg" },
+    { "word": "Azul claro", "img": "img/Los colores/Azul claro.jpg", "transcript": "[aˈθul ˈklaɾo]", audio: "audio/Los colores/Azul claro.ogg" },
+    { "word": "Morado", "img": "img/Los colores/Morado.jpg", "transcript": "[moˈɾaðo]", audio: "audio/Los colores/Morado.ogg" },
+    { "word": "Violeta", "img": "img/Los colores/Violeta.jpg", "transcript": "[bjoˈleta]", audio: "audio/Los colores/Violeta.ogg" },
+    { "word": "Marrón", "img": "img/Los colores/Marrón.jpg", "transcript": "[maˈron]", audio: "audio/Los colores/Marrón.ogg" },
+    { "word": "Gris", "img": "img/Los colores/Gris.jpg", "transcript": "[ɡɾis]", audio: "audio/Los colores/Gris.ogg" },
+    { "word": "Blanco", "img": "img/Los colores/Blanco.jpg", "transcript": "[ˈblaŋko]", audio: "audio/Los colores/Blanco.ogg" },
+    { "word": "Negro", "img": "img/Los colores/Negro.jpg", "transcript": "[ˈneɡɾo]", audio: "audio/Los colores/Negro.ogg" },
+    { "word": "Beige", "img": "img/Los colores/Beige.jpg", "transcript": "[ˈbeiʒ]", audio: "audio/Los colores/Beige.ogg" },
+  ]
 }
 ];
 
