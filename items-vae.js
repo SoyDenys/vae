@@ -442,6 +442,31 @@ const items = [
     { "word": "Negro", "img": "img/Los colores/Negro.jpg", "transcript": "[ˈneɡɾo]", audio: "audio/Los colores/Negro.ogg" },
     { "word": "Beige", "img": "img/Los colores/Beige.jpg", "transcript": "[ˈbeiʒ]", audio: "audio/Los colores/Beige.ogg" },
   ]
+},
+{
+  "id": "voc-mascotas",
+  "name": "Las mascotas",
+  "emoji": "🐶",
+  "words": [
+    { "word": "El perro", "img": "img/Los animales/El perro.jpg", "transcript": "[el ˈpero]", audio: "audio/Los animales/El perro.ogg" },
+    { "word": "El gato", "img": "img/Los animales/El gato.jpg", "transcript": "[el ˈɡato]", audio: "audio/Los animales/El gato.ogg" },
+    { "word": "El pez", "img": "img/Los animales/El pez.jpg", "transcript": "[el ˈpeθ]", audio: "audio/Los animales/El pez.ogg" },
+    { "word": "El conejo", "img": "img/Los animales/El conejo.jpg", "transcript": "[el koˈnexo]", audio: "audio/Los animales/El conejo.ogg" },
+    { "word": "La cobaya", "img": "img/Los animales/La cobaya.jpg", "transcript": "[la koˈβaʝa]", audio: "audio/Los animales/La cobaya.ogg" },
+    { "word": "El hurón", "img": "img/Los animales/El hurón.jpg", "transcript": "[el uˈɾon]", audio: "audio/Los animales/El hurón.ogg" },
+    { "word": "El periquito", "img": "img/Los animales/El periquito.jpg", "transcript": "[el peɾiˈkito]", audio: "audio/Los animales/El periquito.ogg" },
+    { "word": "El loro", "img": "img/Los animales/El loro.jpg", "transcript": "[el ˈloɾo]", audio: "audio/Los animales/El loro.ogg" },
+    { "word": "El canario", "img": "img/Los animales/El canario.jpg", "transcript": "[el kaˈnaɾjo]", audio: "audio/Los animales/El canario.ogg" },
+    { "word": "La tortuga", "img": "img/Los animales/La tortuga.jpg", "transcript": "[la toɾˈtuɡa]", audio: "audio/Los animales/La tortuga.ogg" },
+    { "word": "La iguana", "img": "img/Los animales/La iguana.jpg", "transcript": "[la iˈɡwana]", audio: "audio/Los animales/La iguana.ogg" },
+    { "word": "La serpiente", "img": "img/Los animales/La serpiente.jpg", "transcript": "[la seɾˈpjente]", audio: "audio/Los animales/La serpiente.ogg" },
+    { "word": "La chinchilla", "img": "img/Los animales/La chinchilla.jpg", "transcript": "[la tʃinˈtʃiʝa]", audio: "audio/Los animales/La chinchilla.ogg" },
+    { "word": "El mapache", "img": "img/Los animales/El mapache.jpg", "transcript": "[el maˈpatʃe]", audio: "audio/Los animales/El mapache.ogg" },
+    { "word": "El ratón", "img": "img/Los animales/El ratón.jpg", "transcript": "[el raˈton]", audio: "audio/Los animales/El ratón.ogg" },
+    { "word": "La rata", "img": "img/Los animales/La rata.jpg", "transcript": "[la ˈrata]", audio: "audio/Los animales/La rata.ogg" },
+    { "word": "El hámster", "img": "img/Los animales/El hámster.jpg", "transcript": "[el ˈamsteɾ]", audio: "audio/Los animales/El hámster.ogg" },
+    { "word": "El lagarto", "img": "img/Los animales/El lagarto.jpg", "transcript": "[el laˈɡaɾto]", audio: "audio/Los animales/El lagarto.ogg" },
+  ]
 }
 ];
 
