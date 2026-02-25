@@ -44,7 +44,8 @@ a{
 }
 
 #text-escuchar {
-    height: 100px;
+    height: auto;
+    padding-bottom: 15px;
     margin: 0 !important;
     font-size: 2rem;
 }
@@ -81,9 +82,18 @@ a{
   z-index: 1000;
 }
 
+
 .scroll-top:hover {
   background: rgba(0, 0, 0, 0.7);
 }
+
+.svg-audio{
+    color: white;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+
 
 /* Появление */
 .scroll-top.show {
