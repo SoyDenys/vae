@@ -89,6 +89,26 @@ function searchPage(categoryName) {
 
         card.innerHTML = `
             <div class="team-member glass">
+            <svg class="svg-audio" width="64" height="64" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <g fill="white">
+            <!-- Корпус динамика -->
+                <polygon points="3,9 7,9 12,5 12,19 7,15 3,15"/>
+            <!-- Внутренняя волна -->
+                <path d="M16 8
+                    Q18 12 16 16"
+                  stroke="white"
+                  stroke-width="2"
+                  fill="none"
+                  stroke-linecap="round"/>
+            <!-- Внешняя волна -->
+                <path d="M19 5
+                     Q23 12 19 19"
+                  stroke="white"
+                  stroke-width="2"
+                  fill="none"
+                  stroke-linecap="round"/>
+                </g>
+            </svg>
             <img class="img-palabras" src="${wordObj.img}">
             <h3 class="el-palabra">${wordObj.word}</h3>
             ${wordObj.transcript ? `<h4 class="transcript">${wordObj.transcript}</h4>` : ``}</div>`;
@@ -177,7 +197,7 @@ function gameRandomWord(categoryName){
     buttons.forEach((btn, i) => {btn.textContent = values[i];});
 }
 
-let audioYes = new Audio('audio/sí.ogg');
+let audioYes = new Audio('audio/sí.mp3');
 let audioNo = new Audio('audio/no.mp3');
 
 // перемешиваем массив Фишер–Йетс алгоритмом
@@ -240,8 +260,8 @@ function nuwGame (tema){
 function startEscuchar (){
     clianEscuchar();
     showPage('escuchar');
+    escucharActive = true;
     escucharPalabras(category.name);
-    
 }
 
 function playAudio(path){
@@ -252,50 +272,21 @@ function playAudio(path){
 
 let revolver = false;
 let pausa = false;
-
-function escucharMenuBatton(comand){
-    if (comand.id == "pausa"){
-        document.getElementById(comand.id).classList.add("none");
-        document.getElementById("reproducir").classList.remove("none");
-        pausa = true;
-
-    } else if (comand.id == "reproducir"){
-        document.getElementById(comand.id).classList.add("none");
-        document.getElementById("pausa").classList.remove("none");
-        pausa = false;
-        escucharPalabras(category.name);
-
-    } else if (comand.id == "no-revolver"){
-        document.getElementById(comand.id).classList.add("none");
-        document.getElementById("revolver").classList.remove("none");
-
-        revolver = true;   // ➡️ обычный порядок
-        toggleRevolver();
-
-    } else if (comand.id == "revolver"){
-        document.getElementById(comand.id).classList.add("none");
-        document.getElementById("no-revolver").classList.remove("none");
-
-        revolver = false;    // 🔀 случайный порядок
-        toggleRevolver();
-    }
-}
-
+let escucharActive = false;
 
 let escucharIndex = 0;
 let escucharOrder = [];
-let escucharTimeout = null;
 let escucharCategory = null;
-let escucharCurrentWordIndex = null; // индекс слова в category.words
+let escucharCurrentWordIndex = null;
+let lastPlayedIndex = null;
 
+// 🔥 Один глобальный аудио-объект
+let escucharAudio = new Audio();
 
 function detenerEscuchar() {
-    if (escucharTimeout) {
-        clearTimeout(escucharTimeout);
-        escucharTimeout = null;
-    }
+    escucharActive = false;
+    escucharAudio.pause();
 }
-
 
 function reconstruirOrden(words, currentIndex, random) {
     let order = words.map((_, i) => i);
@@ -309,30 +300,8 @@ function reconstruirOrden(words, currentIndex, random) {
     return order;
 }
 
-
-// function toggleRevolver() {
-//     if (!escucharCategory || escucharCurrentWordIndex === null) return;
-
-//     // пересобираем порядок с учётом режима
-//     escucharOrder = reconstruirOrden(
-//         escucharCategory.words,
-//         escucharCurrentWordIndex,
-//         revolver
-//     );
-
-//     // находим позицию текущего слова в новом порядке
-//     let pos = escucharOrder.indexOf(escucharCurrentWordIndex);
-
-//     // 🔑 Чтобы не повторять текущее слово, идём на следующий
-//     escucharIndex = (pos + 1) % escucharOrder.length;
-// }
-
-
 function toggleRevolver() {
     if (!escucharCategory || escucharCurrentWordIndex === null) return;
-
-    // ⛔ ОЧЕНЬ ВАЖНО
-    detenerEscuchar();
 
     escucharOrder = reconstruirOrden(
         escucharCategory.words,
@@ -342,25 +311,43 @@ function toggleRevolver() {
 
     const pos = escucharOrder.indexOf(escucharCurrentWordIndex);
     escucharIndex = (pos + 1) % escucharOrder.length;
-
-    // ▶️ запускаем дальше вручную
-    escucharPalabras(category.name);
 }
 
-let lastPlayedIndex = null;
+function escucharMenuBatton(comand){
 
+    if (comand.id == "pausa"){
+        document.getElementById("pausa").classList.add("none");
+        document.getElementById("reproducir").classList.remove("none");
+        pausa = true;
+        escucharAudio.pause();
+
+    } else if (comand.id == "reproducir"){
+        document.getElementById("reproducir").classList.add("none");
+        document.getElementById("pausa").classList.remove("none");
+        pausa = false;
+        escucharAudio.play();
+
+    } else if (comand.id == "no-revolver"){
+        document.getElementById("no-revolver").classList.add("none");
+        document.getElementById("revolver").classList.remove("none");
+        revolver = true;
+        toggleRevolver();
+
+    } else if (comand.id == "revolver"){
+        document.getElementById("revolver").classList.add("none");
+        document.getElementById("no-revolver").classList.remove("none");
+        revolver = false;
+        toggleRevolver();
+    }
+}
 
 function escucharPalabras(categoryName) {
-    // режим "escuchar" должен быть активен
+
     if (!document.getElementById("escuchar")?.classList.contains("active")) {
         detenerEscuchar();
         return;
     }
 
-    // если уже запущено — не запускаем повторно
-    if (escucharTimeout) return;
-
-    // инициализация категории
     if (!escucharCategory || escucharCategory.name !== categoryName) {
         escucharCategory = items.find(item => item.name === categoryName);
 
@@ -379,22 +366,13 @@ function escucharPalabras(categoryName) {
     }
 
     function playNext() {
-        // режим выключен
-        if (!document.getElementById("escuchar")?.classList.contains("active")) {
-            detenerEscuchar();
-            return;
-        }
 
-        // пауза
-        if (pausa) {
-            escucharTimeout = null;
-            return;
-        }
+        if (!escucharActive) return;
+        if (pausa) return;
 
         let wordIndex = escucharOrder[escucharIndex];
-        escucharCurrentWordIndex = wordIndex;
 
-        // ⛔ защита от повтора того же слова
+        // защита от повтора
         if (wordIndex === lastPlayedIndex) {
             escucharIndex = (escucharIndex + 1) % escucharOrder.length;
             wordIndex = escucharOrder[escucharIndex];
@@ -405,7 +383,7 @@ function escucharPalabras(categoryName) {
 
         const wordObj = escucharCategory.words[wordIndex];
 
-        // ⬇️ ОСТАВЛЕНО ТОЧНО КАК ТЫ ПРОСИЛ
+        // обновляем UI
         if (wordObj.img) {
             document.getElementById('img-escuchar').src = wordObj.img;
         }
@@ -414,19 +392,8 @@ function escucharPalabras(categoryName) {
             document.getElementById('text-escuchar').textContent = wordObj.word;
         }
 
-        let delay = 2000;
-
-        if (wordObj.audio) {
-            const audio = new Audio(wordObj.audio);
-            audio.onloadedmetadata = () => {
-                delay = (audio.duration * 1000) + 1500;
-            };
-            audio.play().catch(() => {});
-        }
-
         escucharIndex++;
 
-        // зацикливание
         if (escucharIndex >= escucharOrder.length) {
             escucharIndex = 0;
             escucharOrder = reconstruirOrden(
@@ -436,25 +403,48 @@ function escucharPalabras(categoryName) {
             );
         }
 
-        escucharTimeout = setTimeout(() => {
-            escucharTimeout = null;
+        if (wordObj.audio) {
+
+            escucharAudio.src = wordObj.audio;
+            escucharAudio.currentTime = 0;
+
+            escucharAudio.onended = () => {
+    if (!pausa && escucharActive) {
+        setTimeout(() => {
+            if (!pausa && escucharActive) {
+                playNext();
+            }
+        }, 1200); // пауза 1.2 секунды
+    }
+};
+
+
+            escucharAudio.play().catch(() => {});
+
+        } else {
             playNext();
-        }, delay);
+        }
     }
 
     playNext();
 }
 
-
 function clianEscuchar(){
     revolver = false;
     pausa = false;
+    escucharActive = false;
+    escucharIndex = 0;
+    lastPlayedIndex = null;
+
+    escucharAudio.pause();
+    escucharAudio.currentTime = 0;
+
     document.getElementById("pausa").classList.remove("none");
     document.getElementById("no-revolver").classList.remove("none");
     document.getElementById("reproducir").classList.add("none");
     document.getElementById("revolver").classList.add("none");
-
 }
+
 
 
 
