@@ -506,6 +506,42 @@ const items = [
     { "word": "El reno", "img": "img/Los animales/El reno.jpg", "transcript": "[el ˈreno]", audio: "audio/Los animales/El reno.mp3" },
     { "word": "El avestruz", "img": "img/Los animales/El avestruz.jpg", "transcript": "[el aβesˈtɾuθ]", audio: "audio/Los animales/El avestruz.mp3" },
   ]
+},
+{
+  "id": "voc-animales-del-bosque",
+  "name": "Los animales del bosque",
+  "emoji": "🐺",
+  "words": [
+    { "word": "El lobo", "img": "img/Los animales/El lobo.jpg", "transcript": "[el ˈloβo]", audio: "audio/Los animales/El lobo.mp3" },
+    { "word": "El zorro", "img": "img/Los animales/El zorro.jpg", "transcript": "[el ˈθoro]", audio: "audio/Los animales/El zorro.mp3" },
+    { "word": "El oso", "img": "img/Los animales/El oso.jpg", "transcript": "[el ˈoso]]", audio: "audio/Los animales/El oso.mp3" },
+    { "word": "El jabalí", "img": "img/Los animales/El jabalí.jpg", "transcript": "[el xaβaˈli]", audio: "audio/Los animales/El jabalí.mp3" },
+    { "word": "El ciervo", "img": "img/Los animales/El ciervo.jpg", "transcript": "[el ˈθjeɾβo]", audio: "audio/Los animales/El ciervo.mp3" },
+    { "word": "El corzo", "img": "img/Los animales/El corzo.jpg", "transcript": "[el ˈkoɾθo]", audio: "audio/Los animales/El corzo.mp3" },
+    { "word": "El tejón", "img": "img/Los animales/El tejón.jpg", "transcript": "[el teˈxon]", audio: "audio/Los animales/El tejón.mp3" },
+    { "word": "El erizo", "img": "img/Los animales/El erizo.jpg", "transcript": "[el eˈɾiθo]", audio: "audio/Los animales/El erizo.mp3" },
+    { "word": "El conejo", "img": "img/Los animales/El conejo.jpg", "transcript": "[el koˈnexo]", audio: "audio/Los animales/El conejo.mp3" },
+    { "word": "La liebre", "img": "img/Los animales/La liebre.jpg", "transcript": "[la ˈljeβɾe]", audio: "audio/Los animales/La liebre.mp3" },
+    { "word": "El lince", "img": "img/Los animales/El lince.jpg", "transcript": "[el ˈlinθe]", audio: "audio/Los animales/El lince.mp3" },
+    { "word": "La nutria", "img": "img/Los animales/La nutria.jpg", "transcript": "[la ˈnutɾja]", audio: "audio/Los animales/La nutria.mp3" },
+    { "word": "El búho", "img": "img/Los animales/El búho.jpg", "transcript": "[el ˈbu.o]", audio: "audio/Los animales/El búho.mp3" },
+    { "word": "El águila", "img": "img/Los animales/El águila.jpg", "transcript": "[el ˈaɣila]", audio: "audio/Los animales/El águila.mp3" },
+    { "word": "El halcón", "img": "img/Los animales/El halcón.jpg", "transcript": "[el alˈkon]", audio: "audio/Los animales/El halcón.mp3" },
+    { "word": "El cuervo", "img": "img/Los animales/El cuervo.jpg", "transcript": "[el ˈkweɾβo]", audio: "audio/Los animales/El cuervo.mp3" },
+    { "word": "La serpiente", "img": "img/Los animales/La serpiente.jpg", "transcript": "[la seɾˈpjente]", audio: "audio/Los animales/La serpiente.mp3" },
+    { "word": "La rana", "img": "img/Los animales/La rana.jpg", "transcript": "[la ˈrana]", audio: "audio/Los animales/La rana.mp3" },
+    { "word": "El castor", "img": "img/Los animales/El castor.jpg", "transcript": "[el kasˈtoɾ]", audio: "audio/Los animales/El castor.mp3" },
+    { "word": "El alce", "img": "img/Los animales/El alce.jpg", "transcript": "[el ˈalθe]", audio: "audio/Los animales/El alce.mp3" },
+    { "word": "La ardilla", "img": "img/Los animales/La ardilla.jpg", "transcript": "[la aɾˈðiʝa]", audio: "audio/Los animales/La ardilla.mp3" },
+    { "word": "El coyote", "img": "img/Los animales/El coyote.jpg", "transcript": "[el koˈʝote]", audio: "audio/Los animales/El coyote.mp3" },
+    { "word": "El perezoso", "img": "img/Los animales/El perezoso.jpg", "transcript": "[el peɾeˈθoso]", audio: "audio/Los animales/El perezoso.mp3" },
+    { "word": "El topo", "img": "img/Los animales/El topo.jpg", "transcript": "[el ˈtopo]", audio: "audio/Los animales/El topo.mp3" },
+    { "word": "El mono", "img": "img/Los animales/El mono.jpg", "transcript": "[el ˈmono]", audio: "audio/Los animales/El mono.mp3" },
+    { "word": "El lémur", "img": "img/Los animales/El lémur.jpg", "transcript": "[el ˈlemuɾ]", audio: "audio/Los animales/El lémur.mp3" },
+    { "word": "El murciélago", "img": "img/Los animales/El murciélago.jpg", "transcript": "[el muɾˈθjelaɣo]", audio: "audio/Los animales/El murciélago.mp3" },
+    { "word": "La mofeta", "img": "img/Los animales/La mofeta.jpg", "transcript": "[la moˈfeta]", audio: "audio/Los animales/La mofeta.mp3" },
+    { "word": "El mapache", "img": "img/Los animales/El mapache.jpg", "transcript": "[el maˈpatʃe]", audio: "audio/Los animales/El mapache.mp3" },
+  ]
 }
 ];
 
