@@ -213,9 +213,6 @@ function shuffle(array) {
 buttons.forEach(btn => {
   btn.addEventListener("click", () => {
     if (btn.classList.contains("wrong") || btn.classList.contains("correct")){
-        buttons.forEach(btn => {
-  btn.addEventListener("click", () => {
-    if (btn.classList.contains("wrong") || btn.classList.contains("correct")){
         if (btn.classList.contains("correct")){
             if (wordRight.audio){
             let timeOutAudio = wordRight.audio;
