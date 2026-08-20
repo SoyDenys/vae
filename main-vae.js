@@ -212,7 +212,20 @@ function shuffle(array) {
 // навешиваем обработчики
 buttons.forEach(btn => {
   btn.addEventListener("click", () => {
-    if (btn.classList.contains("wrong") || btn.classList.contains("correct")){return;}
+    if (btn.classList.contains("wrong") || btn.classList.contains("correct")){
+        buttons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    if (btn.classList.contains("wrong") || btn.classList.contains("correct")){
+        if (btn.classList.contains("correct")){
+            if (wordRight.audio){
+            let timeOutAudio = wordRight.audio;
+            setTimeout(() => {
+                    let wordAudio = new Audio(timeOutAudio);
+                    wordAudio.currentTime = 0;
+                    wordAudio.play(); 
+            }, 500);};
+        };
+        return;}
     // проверяем содержимое кнопки
     if (btn.textContent === wordRight.word) {
       document.getElementById('btn-next').classList.remove("none");
